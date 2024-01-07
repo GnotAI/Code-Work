@@ -1,3 +1,5 @@
+# I don't know why but for a solid few hours I was struggling for github to show
+# my code and my laptop refused to connect to my internet so I am tired rn. Just testing again
 import customtkinter
 
 customtkinter.set_appearance_mode("system")
