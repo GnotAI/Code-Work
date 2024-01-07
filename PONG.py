@@ -8,6 +8,8 @@ def ball_anim():
     if ball.top <= 0 or ball.bottom >= screen_h:
         bsy *= -1
     if ball.left <= 0 or ball.right >= screen_w:
+        bsx = bsy
+        bsy = bsx
         ball_restart()
     
     if ball.colliderect(player) or ball.colliderect(opponent):
