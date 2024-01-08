@@ -35,7 +35,7 @@ def ball_restart():
     ball.center = (screen_w/2, screen_h/2)
     bsx *= random.choice((1, -1))
     bsy *= random.choice((1, -1))
-
+    
 #general setup
 pygame.init()
 clock = pygame.time. Clock()
@@ -45,6 +45,8 @@ screen_w = 1400
 screen_h = 800
 screen = pygame.display.set_mode((screen_w, screen_h))
 pygame.display.set_caption('PONG')
+
+# scores will be worked on later
 
 #game rects.
 ball = pygame.Rect(screen_w/2 - 15, screen_h/2 - 15, 30, 30)
