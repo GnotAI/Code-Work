@@ -13,7 +13,7 @@ def ball_anim():
         ball_restart()
     
     if ball.colliderect(player) or ball.colliderect(opponent):
-        bsx *= -1.5
+        bsx *= -1.1
 #border control
 def player_anim():
     player.y += player_s
@@ -46,13 +46,12 @@ screen_h = 800
 screen = pygame.display.set_mode((screen_w, screen_h))
 pygame.display.set_caption('PONG')
 
-# scores will be worked on later
-
 #game rects.
 ball = pygame.Rect(screen_w/2 - 15, screen_h/2 - 15, 30, 30)
 player = pygame.Rect(screen_w - 20, screen_h/2 - 70, 10, 140)
 opponent = pygame.Rect(10, screen_h/2 - 70, 10, 140)
 
+font = pygame.font.Font('freesansbold.ttf', 400)
 bg_color = pygame.Color('grey12')
 light_grey = (200, 200, 200)
 
@@ -100,7 +99,8 @@ while True:
     opponent_anim()
 
     #visuals
-    screen.fill(bg_color)        
+    text = font.render('0', True, light_grey)
+    screen.fill(bg_color)     
     pygame.draw.rect(screen, light_grey, player)
     pygame.draw.rect(screen, light_grey, opponent)
     pygame.draw.ellipse(screen, light_grey, ball)
