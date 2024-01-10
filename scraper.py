@@ -1,8 +1,7 @@
-from bs4 import BeautifulSoup
-import requests
+import pandas as pd
 
 url = "#"
 
-result = requests.get(url)
-doc = BeautifulSoup(result.text, "html.parser")
-print(doc.prettify())
+result = pd.read_html("https://lichess.org/")
+print(result)
+
