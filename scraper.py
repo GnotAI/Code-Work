@@ -1,7 +1,7 @@
 import pandas as pd
 
-url = "#"
+url = input("Enter the url: ")
 
-result = pd.read_html("https://lichess.org/")
+result = pd.read_html(url)
 print(result)
 
