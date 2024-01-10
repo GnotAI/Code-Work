@@ -51,7 +51,6 @@ ball = pygame.Rect(screen_w/2 - 15, screen_h/2 - 15, 30, 30)
 player = pygame.Rect(screen_w - 20, screen_h/2 - 70, 10, 140)
 opponent = pygame.Rect(10, screen_h/2 - 70, 10, 140)
 
-font = pygame.font.Font('freesansbold.ttf', 400)
 bg_color = pygame.Color('grey12')
 light_grey = (200, 200, 200)
 
@@ -99,7 +98,6 @@ while True:
     opponent_anim()
 
     #visuals
-    text = font.render('0', True, light_grey)
     screen.fill(bg_color)     
     pygame.draw.rect(screen, light_grey, player)
     pygame.draw.rect(screen, light_grey, opponent)
