@@ -1,7 +1,6 @@
-import pandas as pd
+from bs4 import BeautifulSoup
+import requests
+import pandas
 
-url = input("Enter the url: ")
-
-result = pd.read_html(url)
+result = pd.read_html('https://youtube.com/')
 print(result)
-
