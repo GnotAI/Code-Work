@@ -20,9 +20,9 @@ red = (255, 0, 0)
 blue = (0, 0, 255)
 
 # Define fonts
-font_large = pygame.font.Font("C:\Windows\Fonts\BAUHS93.TTF", 72)
-font_medium = pygame.font.Font("C:\Windows\Fonts\BAUHS93.TTF", 48)
-font_small = pygame.font.Font("C:\Windows\Fonts\BAUHS93.TTF", 36)
+font_large = pygame.font.Font("/usr/share/fonts/TTF/BAUHS93.TTF", 72)
+font_medium = pygame.font.Font("/usr/share/fonts/TTF/BAUHS93.TTF", 48)
+font_small = pygame.font.Font("/usr/share/fonts/TTF/BAUHS93.TTF", 36)
 
 # Define game objects
 screen = pygame.display.set_mode((screen_width, screen_height))
