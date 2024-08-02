@@ -11,7 +11,7 @@ def ball_anim():
         bsx = bsy
         bsy = bsx
         ball_restart()
-    
+
     if ball.colliderect(player) or ball.colliderect(opponent):
         bsx *= -1.1
 #border control
@@ -32,15 +32,15 @@ def opponent_anim():
 #restarting
 def ball_restart():
     global bsx, bsy
-    ball.center = (screen_w/2, screen_h/2)
+    ballCenter = (screen_w/2, screen_h/2)
     bsx *= random.choice((1, -1))
     bsy *= random.choice((1, -1))
-    
+
 #general setup
 pygame.init()
 clock = pygame.time. Clock()
 
-#setting the main window 
+#setting the main window
 screen_w = 1400
 screen_h = 800
 screen = pygame.display.set_mode((screen_w, screen_h))
@@ -90,15 +90,15 @@ while True:
             if event.key == pygame.K_s:
                 opponent_s -= 7
             if event.key == pygame.K_w:
-                opponent_s += 7         
-                
+                opponent_s += 7
+
 
     ball_anim()
     player_anim()
     opponent_anim()
 
     #visuals
-    screen.fill(bg_color)     
+    screen.fill(bg_color)
     pygame.draw.rect(screen, light_grey, player)
     pygame.draw.rect(screen, light_grey, opponent)
     pygame.draw.ellipse(screen, light_grey, ball)
