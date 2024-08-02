@@ -32,7 +32,7 @@ def opponent_anim():
 #restarting
 def ball_restart():
     global bsx, bsy
-    ball.center = (screen_w/2, screen_h/2)
+    ball.center = (screen_w//2, screen_h//2)
     bsx *= random.choice((1, -1))
     bsy *= random.choice((1, -1))
 
