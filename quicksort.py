@@ -1,11 +1,11 @@
-def quicksort(arr: list, left: int, right: int) -> None:
+def quicksort(arr: list[int], left: int, right: int) -> None:
   if left < right:
     partition_pos = partition(arr, left, right)
     quicksort(arr, left, partition_pos - 1)
     quicksort(arr, partition_pos + 1, right)
 
 
-def partition(arr: list, left: int, right: int) -> int:
+def partition(arr: list[int], left: int, right: int) -> int:
   i = left
   j = right
   pivot = arr[right]
