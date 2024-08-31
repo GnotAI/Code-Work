@@ -21,8 +21,7 @@ def partition(arr: list[int], left: int, right: int) -> int:
     if i < j:
       arr[i], arr[j] = arr[j], arr[i]
 
-  if arr[i] > pivot:
-    arr[i], arr[right] = arr[right], arr[i]
+  arr[i], arr[right] = arr[right], arr[i]
 
   return i
 
