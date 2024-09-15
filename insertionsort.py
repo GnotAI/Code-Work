@@ -1,4 +1,4 @@
-def insertionSort(arr: list[int]) -> list[int]:
+def insertionSort(arr: list[int]) -> None:
   """
     Insertion sort algorithm that performs sorting of lists through a predetermined set of procedures.
 
