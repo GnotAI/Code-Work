@@ -1,4 +1,12 @@
 def quicksort(arr: list[int], left: int, right: int) -> None:
+  """
+    Sorts a given list with a set of procedures, breaking it into substeps until completed.
+
+    # Procedures
+    - Sorts the list for the first iteration with the pivot element being the last element of the list.
+    - Gets the value of the pivot element from the partition function and uses it to split the list into sub sets of itself.
+    - Performs itself recursively on the subsets until the entire list is sorted.
+  """
   if left < right:
     partition_pos = partition(arr, left, right)
     quicksort(arr, left, partition_pos - 1)
@@ -6,6 +14,9 @@ def quicksort(arr: list[int], left: int, right: int) -> None:
 
 
 def partition(arr: list[int], left: int, right: int) -> int:
+  """
+    Returns the pivot value after sorting the list through an iteration of the pivot value.
+  """
   i = left
   j = right
   pivot = arr[right]
