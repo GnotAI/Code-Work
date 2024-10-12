@@ -36,7 +36,10 @@ def partition(arr: list[int], left: int, right: int) -> int:
 
   return i
 
+def main():
+  arr = [1, 3, 6, 10, 7, 5, 15, 13, 2, 5, 4]
+  quicksort(arr, 0, len(arr) - 1)
+  print(arr)
 
-arr = [1, 3, 6, 10, 7, 5, 15, 13, 2, 5, 4]
-quicksort(arr, 0, len(arr) - 1)
-print(arr)
+if __name__ == '__main__':
+  main()

@@ -3,10 +3,9 @@
 
 void insertionSort(int* num, int size) {
   for (int i = 1; i < size; i++) {
-    int j = i;
-    while (j > 0 && num[j - 1] > num[j]) {
-      std::swap(num[j - 1], num[j]);
-      j--;
+    while (i > 0 && num[i - 1] > num[i]) {
+      std::swap(num[i - 1], num[i]);
+      i--;
     }
   }
 }
@@ -18,8 +17,8 @@ int main() {
   insertionSort(arr, size);
 
   // Print sorted array
-  for (int i = 0; i < size; i++) {
-    std::cout << arr[i] << " ";
+  for (int item : arr) {
+    std::cout << item << " ";
   }
   std::cout << std::endl;
 
