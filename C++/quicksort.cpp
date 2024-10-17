@@ -1,5 +1,5 @@
 #include <iostream>
-#include <algorithm>
+#include <utility>
 
 int partition(int *arr, int left, int right);
 void quicksort(int *arr, int left, int right);
@@ -40,7 +40,6 @@ int partition(int *arr, int left, int right) {
 
     if (i < j) {
       std::swap(arr[i], arr[j]);
-      std::cout << "contents swapped" << std::endl
     }
   }
 
