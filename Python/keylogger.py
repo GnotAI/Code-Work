@@ -16,5 +16,6 @@ def main() -> None:
     # Block until 'esc' is pressed
     keyboard.wait('esc')
 
+
 if __name__ == "__main__":
     main()
