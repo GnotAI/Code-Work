@@ -1,6 +1,10 @@
 import keyboard
+from kivy.app import App
+from kivy.uix.label import Label
+from kivy.core.window import Window
 
 file: str = "keylog.txt"
+Window.size = (500, 50)
 
 def log_key_to_file(event) -> None:
     """Log key presses to a file."""
@@ -15,6 +19,13 @@ def main() -> None:
     
     # Block until 'esc' is pressed
     keyboard.wait('esc')
+
+
+class TextDisplayApp(App):
+    def build(self):
+        with open(file, "w") as disp:
+            text = disp.read()
+        return Label(text, font_size='20sp')
 
 
 if __name__ == "__main__":
