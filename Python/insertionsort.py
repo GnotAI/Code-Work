@@ -13,7 +13,9 @@ def insertionSort(arr: list[int]) -> None:
       arr[i - 1], arr[i] = arr[i], arr[i - 1]
       i -= 1
 
-  print(arr)
+  for i, v in enumerate(arr):
+      arr[i] = str(v)
+  print(', '.join(arr))
 
 def main():
   insertionSort([2,1,3,6,4,5])
