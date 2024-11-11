@@ -20,5 +20,6 @@ def insertionSort(arr: list[int]) -> None:
 def main():
   insertionSort([2,1,3,6,4,5])
 
+
 if __name__ == '__main__':
   main()
